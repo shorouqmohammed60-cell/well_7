@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "465709298586",
+    "project_id": "well7-b5bff",
+    "storage_bucket": "well7-b5bff.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465709298586:android:b9ca779ba3bdad7eb38023",
+        "android_client_info": {
+          "package_name": "com.example.new_strucuture"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaWSrnKTG1vMaSKnbSnJMCgLe8oTJJECA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

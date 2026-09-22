@@ -11,8 +11,8 @@ import '../preferences/preferences.dart';
 
 Future<void> initializationClass() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  NotificationService notificationService = NotificationService();
+  // await Firebase.initializeApp();
+  // NotificationService notificationService = NotificationService();
   await EasyLocalization.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
 
@@ -25,7 +25,7 @@ Future<void> initializationClass() async {
 
   secureStorage = FlutterSecureStorage(
       aOptions: getAndroidOptions(), iOptions: getIOSOptions());
-  await notificationService.initialize();
+  // await notificationService.initialize();
 
   await injector.setupDependencyInjection();
   await injector.setupCubit();
