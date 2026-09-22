@@ -5,6 +5,7 @@ import 'app.dart';
 import 'core/init_config/initalization_config.dart';
 import 'core/utils/restart_app_class.dart';
 void main() async {
+  
   await initializationClass();
   runApp(
     EasyLocalization(
