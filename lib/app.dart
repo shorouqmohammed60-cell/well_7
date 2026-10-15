@@ -47,6 +47,7 @@ class _MyAppState extends State<MyApp> {
         child: GetMaterialApp(
           supportedLocales: context.supportedLocales,
           locale: context.locale,
+          
           theme: appTheme(),
           themeMode: ThemeMode.light,
           darkTheme: ThemeData.light(),

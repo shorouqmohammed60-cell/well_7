@@ -1,6 +1,12 @@
 {
     "hi": "Hi",
     "loading": "Loading",
-    "choose": "Choose"
+    "choose": "Choose",
+    "welcome_back": "Welcome Back !",
+    "login": "Login",
+    "logout": "Logout",
+    "Register": "Register",
 
+
+  "_": ""
 }

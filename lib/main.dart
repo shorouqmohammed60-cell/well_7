@@ -12,11 +12,11 @@ void main() async {
       supportedLocales: const [Locale('ar', ''), Locale('en', '')],
       path: 'assets/lang',
       saveLocale: true,
-      startLocale: const Locale('ar', ''),
-      fallbackLocale: const Locale('ar', ''),
+      startLocale: const Locale('en', ''),
+      fallbackLocale: const Locale('en', ''),
       child: HotRestartController(
           child: ScreenUtilInit(
-        designSize: const Size(360, 690),
+        designSize: const Size(375, 812),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (ctx, child) {

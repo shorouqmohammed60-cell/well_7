@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:new_strucuture/features/main_screen/screens/main_screen.dart';
+import 'package:new_strucuture/features/onbording/screen/onboarding_page.dart';
 import 'package:new_strucuture/features/splash/screens/splash_screen.dart';
+
 import '../../core/utils/app_strings.dart';
 import 'package:page_transition/page_transition.dart';
 import '../../features/login/screens/login_screen.dart';
@@ -30,9 +32,15 @@ class AppRoutes {
       //     builder: (context) => Details(service: service),
       //   );
       //
+
+      case Routes.onboardingPageScreenRoute:
+  return MaterialPageRoute(
+    builder: (context) => const OnBoardingPage(),
+  );
       case Routes.loginRoute:
+           bool?  showBackButton = settings.arguments as bool?;
         return PageTransition(
-          child: const LoginScreen(),
+          child:  LoginScreen(showBackButton: showBackButton ?? true,),
           type: PageTransitionType.fade,
           alignment: Alignment.center,
           duration: const Duration(milliseconds: 800),

@@ -1,9 +1,6 @@
 import 'package:new_strucuture/app_bloc_observer.dart';
 import 'package:new_strucuture/core/exports.dart';
-import 'package:new_strucuture/core/notification_services/notification_service.dart';
-import 'package:new_strucuture/firebase_options.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:new_strucuture/injector.dart' as injector;

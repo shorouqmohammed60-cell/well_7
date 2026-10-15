@@ -4,8 +4,6 @@ import 'dart:io';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-import '../../config/routes/app_routes.dart';
-import '../../features/login/data/model/login_model.dart';
 import '../exports.dart';
 import '../preferences/preferences.dart';
 
@@ -147,7 +145,7 @@ class NotificationService {
       requestSoundPermission: true,
     );
 
-    final InitializationSettings initSettings = InitializationSettings(
+    const InitializationSettings initSettings = InitializationSettings(
       android: androidSettings,
       iOS: iosSettings,
     );

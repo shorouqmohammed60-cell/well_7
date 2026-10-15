@@ -1,6 +1,40 @@
 import 'package:new_strucuture/core/exports.dart';
 
-TextStyle _getTextStyle(
+
+TextStyle getTitleBoldStyle({
+  double? fontSize,
+  double? fontHeight,
+  FontWeight? weight,
+  Color?color,
+}) {
+  return TextStyle(
+    fontFamily: AppStrings.fontFamily,
+    fontSize: fontSize ?? 16.sp,
+    fontWeight: weight ?? FontWeight.w700,
+    height: fontHeight ?? 1.0,
+    letterSpacing: 0,
+    color: color??AppColors.black,
+  );
+}
+TextStyle getHintStyle({
+  double? fontSize,
+  double? fontHeight,
+  FontWeight? weight,
+  FontStyle? fontStyle,
+  Color? color,
+}) {
+  return TextStyle(
+    fontFamily: AppStrings.fontFamily,
+    fontSize: (fontSize ?? 14).sp,
+    fontWeight: weight ?? FontWeight.w400,
+    height: fontHeight ?? 0.0,
+    letterSpacing: 0,
+    color: color,
+    fontStyle: fontStyle,
+  );
+}
+
+TextStyle getTextStyle(
     {required double fontSize,
     double? fontHeight,
     required FontWeight fontWeight,
@@ -52,7 +86,7 @@ TextStyle getUnderLine({Color? color, double? fontSize}) {
 // regular style 400
 TextStyle getRegularStyle(
     {Color? color, double? fontHeight, double? fontSize}) {
-  return _getTextStyle(
+  return getTextStyle(
       color: color ?? AppColors.black,
       fontWeight: FontWeight.w400,
       fontSize: fontSize ?? 18.sp,
@@ -61,7 +95,7 @@ TextStyle getRegularStyle(
 
 // regular style 500
 TextStyle getMediumStyle({Color? color, double? fontHeight, double? fontSize}) {
-  return _getTextStyle(
+  return getTextStyle(
       color: color ?? AppColors.black,
       fontWeight: FontWeight.w500,
       fontSize: fontSize ?? 18.sp,
@@ -74,7 +108,7 @@ TextStyle getSemiBoldStyle(
     double? fontHeight,
     double? fontSize,
     FontWeight? fontweight}) {
-  return _getTextStyle(
+  return getTextStyle(
       color: color ?? AppColors.black,
       fontWeight: fontweight ?? FontWeight.w600,
       fontSize: fontSize ?? 18.sp,
@@ -87,7 +121,7 @@ TextStyle getBoldStyle(
     double? fontHeight,
     double? fontSize,
     FontWeight? fontweight}) {
-  return _getTextStyle(
+  return getTextStyle(
       color: color ?? AppColors.black,
       fontWeight: fontweight ?? FontWeight.w700,
       fontSize: fontSize ?? 18.sp,
@@ -96,7 +130,7 @@ TextStyle getBoldStyle(
 
 // Extra Bold style 800
 TextStyle getExtraStyle({Color? color, double? fontHeight, double? fontSize}) {
-  return _getTextStyle(
+  return getTextStyle(
       color: color ?? AppColors.black,
       fontWeight: FontWeight.w800,
       fontSize: fontSize ?? 18.sp,
