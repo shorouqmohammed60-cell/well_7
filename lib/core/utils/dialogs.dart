@@ -1,7 +1,21 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart' show Get;
+import 'package:get/get_navigation/get_navigation.dart' show GetNavigation;
+import 'package:get/get_navigation/src/extension_navigation.dart' show ExtensionSnackbar;
+import 'package:get/get_navigation/src/snackbar/snackbar.dart' show GetSnackBar;
+import 'package:get/route_manager.dart' show SnackPosition;
+//import 'package:get/get.dart' hide TextDirection;
 import 'package:new_strucuture/core/utils/app_colors.dart';
+
+customShowSnackbar({String? message ,required BuildContext context}) {
+  ScaffoldMessenger.of(context)
+                                          .showSnackBar(SnackBar(
+                                              backgroundColor: Colors.red,
+                                                content:
+                                                   Text((message??"Try_again").tr())));
+}
 
 /*----------------------------------------------------------------------------*/
 /*------------------------------  Error Get Bar  -----------------------------*/
@@ -35,7 +49,7 @@ errorGetBar(String message) {
 successGetBar(String? message) {
   Get.showSnackbar(GetSnackBar(
     messageText: Text(
-      message ?? 'success'.tr,
+      message ?? 'success'.tr(),
       style: Get.textTheme.bodyMedium!.copyWith(
         color: Colors.white,
         height: 1.5,
