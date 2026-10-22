@@ -6,6 +6,26 @@
     "login": "Login",
     "logout": "Logout",
     "Register": "Register",
+    "Saudi_Arabia": "Saudi Arabia",
+    "Egypt": "Egypt",
+    "Please_enter_your_phone_number":"Please enter your phone number",
+    "Phone_Number":"Phone Number",
+
+    "verify_your_phone": "we sent an code to verify your phone \n",
+    "Enter_your_verification_code": "Enter your verification code",
+    "submit": "submit",
+    "Facility_Name": "Facility Name",
+    "Please_enter_your_facility_name": "Please enter your facility name",
+    "Email":"Email",
+    "Please_enter_your_email": "Please enter your email",
+    "mail@mail.com": "mail@mail.com",
+    "VAT_Number": "VAT Number",
+    "Please_enter_your_VAT_number":"Please enter your VAT number",
+    "Let’s_start": "Let’s start",
+    "Try_again": "Try again",
+    
+
+    
 
 
   "_": ""

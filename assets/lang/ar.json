@@ -1,13 +1,32 @@
 {
-  "hi": "مرحباً",
+  "hi": "مرحبًا",
   "loading": "جاري التحميل",
   "choose": "اختر",
-  "welcome_back": "مرحبا بعودتك !",
+  "welcome_back": "مرحبًا بعودتك!",
   "login": "تسجيل الدخول",
   "logout": "تسجيل الخروج",
-  "Register": "تسجيل جديد",
+  "Register": "إنشاء حساب",
+  "Saudi_Arabia": "المملكة العربية السعودية",
+  "Egypt": "مصر",
+  "Please_enter_your_phone_number": "من فضلك أدخل رقم هاتفك",
+  "Phone_Number": "رقم الهاتف",
 
+  "verify_your_phone": "لقد أرسلنا رمزًا للتحقق من رقم هاتفك\n",
+  "Enter_your_verification_code": "أدخل رمز التحقق",
+  "submit": "تأكيد",
 
+  "Facility_Name": "اسم المنشأة",
+  "Please_enter_your_facility_name": "من فضلك أدخل اسم المنشأة",
+
+  "Email": "البريد الإلكتروني",
+  "Please_enter_your_email": "من فضلك أدخل بريدك الإلكتروني",
+  "mail@mail.com": "mail@mail.com",
+
+  "VAT_Number": "الرقم الضريبي",
+  "Please_enter_your_VAT_number": "من فضلك أدخل الرقم الضريبي",
+
+  "Let’s_start": "لنبدأ",
+  "Try_again": "حاول مرة أخرى",
 
   "_": ""
 }

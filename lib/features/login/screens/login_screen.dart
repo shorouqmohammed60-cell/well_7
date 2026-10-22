@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:easy_localization/easy_localization.dart';
+import 'package:new_strucuture/config/routes/app_routes.dart';
 import 'package:new_strucuture/core/exports.dart';
 import 'package:new_strucuture/core/widgets/custom_button2.dart';
 import 'package:new_strucuture/features/login/cubit/cubit.dart';
@@ -51,7 +52,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
     
-              SizedBox(height: 45.h),
+              SizedBox(height: 35.h),
+
     
               // Welcome Back
               Text(
@@ -71,37 +73,28 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 35.h),
     
               CustomButton(
-                text: 'Login',
-                width: 200,
-                height: 48,
-                borderRadius: 28,
+                text: 'login'.tr(),
+                
+                // height: 48,
+                borderRadius: 28.r,
                 onPressed: () {
                   if (_key.currentState!.validate()) {
                     print(" valid");
-                      Navigator.push(
+                      Navigator.pushNamed(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const OtpScreen()),
+                    Routes.otpRoute,
                   );
-                    // If the form is valid, display a snackbar. In the real world,
-                    // you'd often call a server or save the information in a database.
-                    // ScaffoldMessenger.of(context).showSnackBar(
-                    //   const SnackBar(content: Text('Processing Data')),
-                    // );
                   } else {
+                    
                     print("not valid");
                   }
     
-                  // // Navigate to the OTP screen when the button is pressed
+                   // Navigate to the OTP screen when the button is pressed
                 
                 },
               ),
     
-              // Login Button
-              // CustomButton(
-              // text: 'Login',
-              // onPressed: () {},
-              // ),
+              
             ],
           ),
         ),

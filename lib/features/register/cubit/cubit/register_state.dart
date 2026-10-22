@@ -11,3 +11,5 @@ class RegisterError extends RegisterState {
   RegisterError({required this.msg});
   
 }
+class RegisterImagePicked extends RegisterState {}
+class RegisterImageDeleted extends RegisterState {}

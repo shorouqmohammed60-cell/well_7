@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:new_strucuture/core/utils/app_colors.dart';
-import 'package:new_strucuture/features/main_screen/cubit/cubit.dart';
-import 'package:new_strucuture/features/main_screen/cubit/state.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:new_strucuture/core/exports.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -14,15 +12,17 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<MainCubit, MainState>(
-      builder: (context, state) {
-        return Scaffold(
-          backgroundColor: AppColors.red,
-          body: const Center(
-            child: Text('Main Screen'),
-          ),
-        );
-      },
+    return Scaffold(
+      backgroundColor: AppColors.white,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kToolbarHeight),
+        child: CustomAppBar(
+          
+          title: 'Register'.tr(),
+          showBackButton: true,
+        ),
+      ),
+      body: const SingleChildScrollView(),
     );
   }
 }

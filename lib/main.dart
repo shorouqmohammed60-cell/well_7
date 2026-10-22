@@ -9,7 +9,7 @@ void main() async {
   await initializationClass();
   runApp(
     EasyLocalization(
-      supportedLocales: const [Locale('ar', ''), Locale('en', '')],
+      supportedLocales: const [Locale('en', ''), Locale('ar', '')],
       path: 'assets/lang',
       saveLocale: true,
       startLocale: const Locale('en', ''),

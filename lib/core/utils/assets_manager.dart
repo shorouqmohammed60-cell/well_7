@@ -5,6 +5,8 @@ const String lottiePath = 'assets/lottie';
 class ImageAssets {
   //images
   static const String appIcon = '$imagePath/app_icon.png';
+  static const String registerImage= '$imagePath/register_image.png';
+
   static const String logo2Image = '$imagePath/app_icon.png';
   static const String logo3Image = '$imagePath/app_icon.png';
   static const String logoImage = '$imagePath/logo.png';
@@ -38,7 +40,10 @@ class ImageAssets {
 
   // icons
   static const String phoneIcon = '$iconsPath/phone.svg';
-  static const String register = '$iconsPath/register.svg';
+  static const String home = '$iconsPath/home.svg';
+
+
+  static const String registerIcon = '$iconsPath/register_icon.svg';
   static const String adress = '$iconsPath/adress.svg';
   static const String cart = '$iconsPath/cart.svg';
   static const String contactUs = '$iconsPath/contact_us.svg';

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:new_strucuture/features/login/screens/otp.dart';
 import 'package:new_strucuture/features/main_screen/screens/main_screen.dart';
 import 'package:new_strucuture/features/onbording/screen/onboarding_page.dart';
 import 'package:new_strucuture/features/splash/screens/splash_screen.dart';
+import '../../features/register/screens/register.dart';
+
 
 import '../../core/utils/app_strings.dart';
 import 'package:page_transition/page_transition.dart';
@@ -10,8 +13,11 @@ import '../../features/login/screens/login_screen.dart';
 class Routes {
   static const String initialRoute = '/';
   static const String loginRoute = '/login';
+  static const String registerRout = '/Register';
   static const String mainRoute = '/main';
   static const String onboardingPageScreenRoute = '/onboardingPageScreenRoute';
+  static const String otpRoute = '/Otp';
+
 }
 
 class AppRoutes {
@@ -48,7 +54,23 @@ class AppRoutes {
 
       case Routes.mainRoute:
         return PageTransition(
-          child: const MainScreen(),
+          child:  MainScreen(),
+          type: PageTransitionType.fade,
+          alignment: Alignment.center,
+          duration: const Duration(milliseconds: 800),
+        );
+
+         case Routes.otpRoute:
+        return PageTransition(
+          child: const OtpScreen(),
+          type: PageTransitionType.fade,
+          alignment: Alignment.center,
+          duration: const Duration(milliseconds: 800),
+        );
+
+        case Routes.registerRout:
+        return PageTransition(
+          child: const Register(),
           type: PageTransitionType.fade,
           alignment: Alignment.center,
           duration: const Duration(milliseconds: 800),

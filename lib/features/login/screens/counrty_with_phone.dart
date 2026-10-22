@@ -1,7 +1,10 @@
 import 'package:new_strucuture/core/exports.dart';
+import 'package:new_strucuture/features/login/data/model/country_model.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:new_strucuture/features/login/cubit/cubit.dart';
 import 'package:new_strucuture/features/login/cubit/state.dart';
-import 'package:new_strucuture/features/login/data/model/country_model.dart';
+
+
 
 class CustomCountryPhoneWidget extends StatefulWidget {
   const CustomCountryPhoneWidget({
@@ -48,133 +51,135 @@ class _CustomCountryPhoneWidgetState extends State<CustomCountryPhoneWidget> {
               color: AppColors.darkGrey,
             ),
           ),
-          child: Column(
-            children: [
-              DropdownButtonHideUnderline(
-                child: DropdownButton<CountryModel>(
-                  isExpanded: true,
-                  value: cubit.selectedCountry,
-                  onChanged: (value) {
-                    if (value == null) return;
-                    cubit.changeContury(value);
-
-                    // Optional:
-                    // Clear phone when country changes
-                    widget.controller?.clear();
-                  },
-                  items: cubit.countries.map(
-                    (country) {
-                      return DropdownMenuItem<CountryModel>(
-                        value: country,
-                        child: Row(
-                          children: [
-                            // Flag
-                            Text(
-                              country.flag,
-                              style: TextStyle(
-                                fontSize: 20.sp,
-                              ),
-                            ),
-
-                            SizedBox(
-                              width: 8.w,
-                            ),
-
-                            // Country Name
-                            Text(
-                              country.name,
-                              style: TextStyle(
-                                fontSize: 14.sp,
-                                color: AppColors.black,
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                DropdownButtonHideUnderline(
+                  child: DropdownButton<CountryModel>(
+                    isExpanded: true,
+                    value: cubit.selectedCountry,
+                    onChanged: (value) {
+                      if (value == null) return;
+                      cubit.changeContury(value);
+            
+                      // Optional:
+                      // Clear phone when country changes
+                      widget.controller?.clear();
                     },
-                  ).toList(),
+                    items: cubit.countries.map(
+                      (country) {
+                        return DropdownMenuItem<CountryModel>(
+                          value: country,
+                          child: Row(
+                            children: [
+                              // Flag
+                              Text(
+                                country.flag,
+                                style: TextStyle(
+                                  fontSize: 20.sp,
+                                ),
+                              ),
+            
+                              SizedBox(
+                                width: 8.w,
+                              ),
+            
+                              // Country Name
+                              Text(
+                                country.name,
+                                style: TextStyle(
+                                  fontSize: 14.sp,
+                                  color: AppColors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ).toList(),
+                  ),
                 ),
-              ),
-              Divider(
-                color: AppColors.darkGrey,
-                height: 1.h,
-              ),
-              SizedBox(
-                height: 8.h,
-              ),
-              Row(
-                children: [
-                  Text(
-                    cubit.selectedCountry?.code??"",
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      color: AppColors.black,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 8.w,
-                  ),
-                  Container(
-                    width: 1.w,
-                    height: 20.h,
-                    color: AppColors.darkGrey,
-                  ),
-                  SizedBox(
-                    width: 8.w,
-                  ),
-                  Expanded(
-                    child: TextFormField(
-                      controller: widget.controller,
-
-                      keyboardType: TextInputType.phone,
-
-                      // Saudi = 10
-                      // Egypt = 11
-                      maxLength: cubit.phoneLength(),
-                      onSaved: (value) {
-                        print("TEXT onSaved $value");
-                      },
-                      onChanged: (value) {
-                        // cubit.changePhone(value);
-                         cubit.phone = value;
-                         cubit.phoneCode = value;
-
-                         
-                      },
-                      onFieldSubmitted: (value) {
-                        print("TEXT onSubmitted $value");
-                      },
-
-                      validator: (value) {
-                        // Empty
-                        if (value == null || value.isEmpty) {
-                          return "Please enter your phone number";
-                        }
-
-                        // Wrong length
-                        if (value.length != cubit.phoneLength()) {
-                          return "Phone number must be ${cubit.phoneLength()} digits";
-                        }
-
-                        return null;
-                      },
-
-                      decoration: InputDecoration(
-                        hintText: 'Phone Number',
-                        hintStyle: TextStyle(
-                          fontSize: 14.sp,
-                          color: AppColors.darkGrey,
-                        ),
-                        border: InputBorder.none,
-                        isDense: true,
-                        counterText: '',
+                Divider(
+                  color: AppColors.darkGrey,
+                  height: 1.h,
+                ),
+                SizedBox(
+                  height: 8.h,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      cubit.selectedCountry?.code??"",
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        color: AppColors.black,
                       ),
                     ),
-                  ),
-                ],
-              ),
-              // Text(" cubit.userName ${ cubit.userName}")
-            ],
+                    SizedBox(
+                      width: 8.w,
+                    ),
+                    Container(
+                      width: 1.w,
+                      height: 20.h,
+                      color: AppColors.darkGrey,
+                    ),
+                    SizedBox(
+                      width: 8.w,
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                        controller: widget.controller,
+            
+                        keyboardType: TextInputType.phone,
+            
+                        // Saudi = 10
+                        // Egypt = 11
+                        maxLength: cubit.phoneLength(),
+                        onSaved: (value) {
+                          print("TEXT onSaved $value");
+                        },
+                        onChanged: (value) {
+                          // cubit.changePhone(value);
+                           cubit.phone = value;
+                           cubit.phoneCode = value;
+            
+                           
+                        },
+                        onFieldSubmitted: (value) {
+                          print("TEXT onSubmitted $value");
+                        },
+            
+                        validator: (value) {
+                          // Empty
+                          if (value == null || value.isEmpty) {
+                            return "Please enter your phone number";
+                          }
+            
+                          // Wrong length
+                          if (value.length != cubit.phoneLength()) {
+                            return "Phone number must be ${cubit.phoneLength()} digits";
+                          }
+            
+                          return null;
+                        },
+            
+                        decoration: InputDecoration(
+                          hintText: 'Phone_Number'.tr(),
+                          hintStyle: TextStyle(
+                            fontSize: 14.sp,
+                            color: AppColors.darkGrey,
+                          ),
+                          border: InputBorder.none,
+                          isDense: true,
+                          counterText: '',
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                // Text(" cubit.userName ${ cubit.userName}")
+              ],
+            ),
           ),
         );
       },

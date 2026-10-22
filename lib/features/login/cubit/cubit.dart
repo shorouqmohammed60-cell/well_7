@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new_strucuture/features/login/data/model/country_model.dart';
-import 'package:new_strucuture/features/login/screens/counrty_with_phone.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 
 import '../data/login_repo.dart';
 import 'state.dart';
@@ -17,12 +18,12 @@ class LoginCubit extends Cubit<LoginState> {
 
   final List<CountryModel> countries = [
     CountryModel(
-      name: 'Saudi Arabia',
+      name: 'Saudi_Arabia'.tr(),
       code: '+966',
       flag: '🇸🇦',
     ),
     CountryModel(
-      name: 'Egypt',
+      name: 'Egypt'.tr(),
       code: '+20',
       flag: '🇪🇬',
     ),

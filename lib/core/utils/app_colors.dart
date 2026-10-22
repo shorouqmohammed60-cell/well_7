@@ -7,6 +7,7 @@ class AppColors {
   static Color secondPrimary = HexColor('#F4E07D');
   static Color darkGrey = HexColor('#DADADA');
   static Color lightGrey = HexColor('#F5F5F5');
+  
   static Color textFieldColorFilled = HexColor('#F8F8F8');
   static Color hintColor = HexColor(' #747474');
 
