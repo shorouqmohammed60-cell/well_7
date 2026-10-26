@@ -19,7 +19,7 @@ Future<void> setupCubit() async {
  
   serviceLocator.registerFactory(
     () => MainCubit(
-      serviceLocator(),
+      //serviceLocator(),
     ),
   );
   serviceLocator.registerFactory(

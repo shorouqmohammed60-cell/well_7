@@ -45,7 +45,7 @@ class ImageAssets {
 
   static const String registerIcon = '$iconsPath/register_icon.svg';
   static const String adress = '$iconsPath/adress.svg';
-  static const String cart = '$iconsPath/cart.svg';
+  
   static const String contactUs = '$iconsPath/contact_us.svg';
   static const String deliveryAddress = '$iconsPath/delivery_address.svg';
   static const String emailIcon = '$iconsPath/email.svg';
@@ -54,6 +54,15 @@ class ImageAssets {
   static const String email2 = '$iconsPath/email2.svg';
 
   static const String email = '$iconsPath/email.svg';
+  static const String orders = '$iconsPath/orders.svg';
+  static const String market = '$iconsPath/market.svg';
+  static const String cart = '$iconsPath/cart.svg';
+  static const String profile_nav = '$iconsPath/profile-nav.svg';
+
+
+
+
+
   static const String facilityName = '$iconsPath/facility_name.svg';
   static const String language = '$iconsPath/language.svg';
   static const String location = '$iconsPath/location.svg';

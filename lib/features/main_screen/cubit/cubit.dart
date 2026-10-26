@@ -4,7 +4,17 @@ import '../data/main_repo.dart';
 import 'state.dart';
 
 class MainCubit extends Cubit<MainState> {
-  MainCubit(this.api) : super(MainInitial());
+  MainCubit() : super(MainInitial());
 
-  MainRepo api;
+  void changeBottomNav(int index){
+    emit(
+      _MainState(selectedIndex: index),
+    );
+  }
+
+ // MainRepo api;
+}
+
+class _MainState extends MainState {
+  _MainState({required super.selectedIndex});
 }

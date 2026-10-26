@@ -9,7 +9,7 @@ class AppColors {
   static Color lightGrey = HexColor('#F5F5F5');
   
   static Color textFieldColorFilled = HexColor('#F8F8F8');
-  static Color hintColor = HexColor(' #747474');
+  static Color hintColor = HexColor('#747474');
 
 
   
