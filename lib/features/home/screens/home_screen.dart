@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:new_strucuture/core/exports.dart';
-import 'package:new_strucuture/features/home/screens/widgets/home_header.dart';
+import 'package:new_strucuture/features/home/screens/widgets/categories_section.dart';
+import 'package:new_strucuture/features/home/screens/widgets/home_appbar.dart';
+import 'package:new_strucuture/features/home/screens/widgets/row_of_title.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,114 +17,58 @@ class _HomeScreen extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.white,
-      appBar:  homeAppbar(),
-   
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-          children: [
-            
-            
-            Catwgories()
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+        backgroundColor: AppColors.white,
+        appBar: homeAppbar(),
 
-            // categorieseSeation(),
-            //const resentproductsetion(),
-            
+        body: SafeArea(
+          child: SingleChildScrollView(
+            controller: scrollController,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
 
+                SizedBox(height: 10 .h),
 
-            
-            // categoriese seation >> setion title , category gride >> category card
+                // Categories
+                RowOfTitle(
 
-            //mostSalesproductSetion >> setion title , horizontal product list >> product card
-
-
-            //resentproductsetion >> setion title , horizontal product list >> product card
-
-
-          ]
-        ),
-      ),
-    ),
-            //boutom navigation bar >>market ,orders ,cart ,profile
-
-    );
-  }
-
-  AppBar homeAppbar() {
-    return AppBar(
-      // Logo
-      leading: Padding(
-        padding: EdgeInsets.all(8.w),
-        child: SvgPicture.asset(
-          ImageAssets.home,
-          width: 30.sp,
-          height: 30.sp,
-        ),
-      ),
-
-      // Search
-      title: TextField(
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(
-            vertical: 1.h,
-          ),
-          hintText: 'search_for_product'.tr(),
-          prefixIcon: const Icon(Icons.search),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(24.r),
-          ),
-        ),
-      ),
-
-      // Notification
-      actions: [
-        Padding(
-          padding: EdgeInsets.only(right: 10.w),
-          child: Stack(
-            children: [
-              Icon(
-                Icons.notifications_none,
-                size: 30.sp,
-              ),
-
-              Positioned(
-                right: 0,
-                top: 0,
-                child: Container(
-                  width: 18.w,
-                  height: 18.h,
-                  decoration: const BoxDecoration(
-                    color: Colors.amber,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: Text(
-                      '2',
-                      style: TextStyle(
-                        fontSize: 11.sp,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
+                  title: 'categories'.tr(),
                 ),
-              ),
-            ],
+
+                
+
+                 CategoriesSection(),
+
+                SizedBox(height: 25.h),
+
+                RowOfTitle(
+                  title: 'most_sale_products'.tr(),
+                ),
+
+                SizedBox(height: 15.h),
+
+                // MostSaleProductsSection(),
+
+                SizedBox(height: 25.h),
+
+               
+                RowOfTitle(
+                  title: 'Recent_products'.tr(),
+                ),
+
+                SizedBox(height: 15.h),
+
+                // RecentProductsSection(),
+              ],
+            ),
           ),
         ),
-      ],
+      ),
     );
-  }
-}
-
-class Catwgories extends StatelessWidget {
-  const Catwgories({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text("body");
   }
 }

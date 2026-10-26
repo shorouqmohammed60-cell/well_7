@@ -5,15 +5,20 @@ TextStyle getTitleBoldStyle({
   double? fontSize,
   double? fontHeight,
   FontWeight? weight,
+  FontWeight? height,
+
   Color?color,
+  FontStyle? fontStyle,
 }) {
   return TextStyle(
     fontFamily: AppStrings.fontFamily,
     fontSize: fontSize ?? 16.sp,
     fontWeight: weight ?? FontWeight.w700,
-    height: fontHeight ?? 1.0,
+    height: fontHeight ?? 1.sp,
+
     letterSpacing: 0,
-    color: color??AppColors.black,
+    color: color??AppColors.darkBlack,
+    
   );
 }
 TextStyle getHintStyle({

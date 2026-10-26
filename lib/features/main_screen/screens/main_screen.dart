@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:new_strucuture/core/exports.dart';
 import 'package:new_strucuture/features/home/screens/home_screen.dart';
-import 'package:new_strucuture/features/home/screens/widgets/home_header.dart';
+import 'package:new_strucuture/features/home/screens/widgets/home_appbar.dart';
 import 'package:new_strucuture/features/main_screen/cubit/cubit.dart';
 import 'package:new_strucuture/features/main_screen/cubit/state.dart';
 
@@ -43,66 +43,83 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                 ),
               ),
-              bottomNavigationBar: BottomNavigationBar(
-                type: BottomNavigationBarType.fixed,
-                elevation: 20,
-                currentIndex: state.selectedIndex,
+              bottomNavigationBar: Container(
+               
+               decoration: 
+               
+               BoxDecoration(
+                boxShadow: [
+                   BoxShadow(
+        color: Colors.grey.withOpacity(0.2),
+        blurRadius: 8,
+        spreadRadius: 8,
+        offset: const Offset(0, -3),
+      ),
+                ]
+               ),
 
-                onTap: (val) {
-                  context.read<MainCubit>().changeBottomNav(val);
-                },
-                selectedItemColor: AppColors.primary,
-                 unselectedItemColor: AppColors.hintColor,
-
-
-                showSelectedLabels:true,
-                showUnselectedLabels: true,
-
-                unselectedLabelStyle: TextStyle(
-                  color: AppColors.black,
-                  fontSize: 12.sp,
+                child: BottomNavigationBar(
+                  backgroundColor: Colors.white,
+                  type: BottomNavigationBarType.fixed,
+                  elevation: 20,
+                  currentIndex: state.selectedIndex,
+                
+                  onTap: (val) {
+                    context.read<MainCubit>().changeBottomNav(val);
+                  },
+                  selectedItemColor: AppColors.primary,
+                   unselectedItemColor: AppColors.hintColor,
+                
+                
+                  showSelectedLabels:true,
+                  showUnselectedLabels: true,
+                
+                  unselectedLabelStyle: TextStyle(
+                    color: AppColors.black,
+                    fontSize: 12.sp,
+                  ),
+                  selectedLabelStyle: TextStyle(
+                    color: AppColors.primary,
+                    fontSize: 12.sp,
+                  ),
+                
+                
+                  items: [
+                    BottomNavigationBarItem(
+                        icon: SvgPicture.asset(ImageAssets.market,colorFilter:ColorFilter.mode(
+                          state.selectedIndex == 0
+                          ?AppColors.primary :AppColors.hintColor,
+                                BlendMode.srcIn,),
+                        
+                
+                        ),
+                        label: "Market".tr()),
+                    BottomNavigationBarItem(
+                        icon: SvgPicture.asset(ImageAssets.orders,width: 24.w,
+                    height: 24.h,
+                        colorFilter:ColorFilter.mode(
+                          state.selectedIndex == 1
+                          ?AppColors.primary :AppColors.hintColor,
+                                BlendMode.srcIn,),
+                        ),
+                        label: "orders".tr()),
+                    BottomNavigationBarItem(
+                        icon: SvgPicture.asset(ImageAssets.cart,width: 27.w,
+                    height: 27.h,
+                        colorFilter:ColorFilter.mode(
+                          state.selectedIndex == 2
+                          ?AppColors.primary :AppColors.hintColor,
+                                BlendMode.srcIn,),), label: "cart".tr()),
+                    BottomNavigationBarItem(
+                        icon: SvgPicture.asset(ImageAssets.profile_nav,
+                        
+                       colorFilter:ColorFilter.mode(
+                          state.selectedIndex == 3
+                          ?AppColors.primary :AppColors.hintColor,
+                                BlendMode.srcIn,),),
+                        label: "profile".tr())
+                  ],
                 ),
-                selectedLabelStyle: TextStyle(
-                  color: AppColors.primary,
-                  fontSize: 12.sp,
-                ),
-
-
-                items: [
-                  BottomNavigationBarItem(
-                      icon: SvgPicture.asset(ImageAssets.market,colorFilter:ColorFilter.mode(
-                        state.selectedIndex == 0
-                        ?AppColors.primary :AppColors.hintColor,
-                              BlendMode.srcIn,),
-                      
-
-                      ),
-                      label: "Market".tr()),
-                  BottomNavigationBarItem(
-                      icon: SvgPicture.asset(ImageAssets.orders,width: 24.w,
-    height: 24.h,
-                      colorFilter:ColorFilter.mode(
-                        state.selectedIndex == 1
-                        ?AppColors.primary :AppColors.hintColor,
-                              BlendMode.srcIn,),
-                      ),
-                      label: "orders".tr()),
-                  BottomNavigationBarItem(
-                      icon: SvgPicture.asset(ImageAssets.cart,width: 27.w,
-    height: 27.h,
-                      colorFilter:ColorFilter.mode(
-                        state.selectedIndex == 2
-                        ?AppColors.primary :AppColors.hintColor,
-                              BlendMode.srcIn,),), label: "cart".tr()),
-                  BottomNavigationBarItem(
-                      icon: SvgPicture.asset(ImageAssets.profile_nav,
-                      
-                     colorFilter:ColorFilter.mode(
-                        state.selectedIndex == 3
-                        ?AppColors.primary :AppColors.hintColor,
-                              BlendMode.srcIn,),),
-                      label: "profile".tr())
-                ],
               )
               //boutom navigation bar >>market ,orders ,cart ,profile
 
