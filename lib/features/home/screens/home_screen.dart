@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:new_strucuture/core/exports.dart';
 import 'package:new_strucuture/features/home/screens/widgets/categories_section.dart';
 import 'package:new_strucuture/features/home/screens/widgets/home_appbar.dart';
+import 'package:new_strucuture/features/home/screens/widgets/product_section.dart';
 import 'package:new_strucuture/features/home/screens/widgets/row_of_title.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -52,7 +53,7 @@ class _HomeScreen extends State<HomeScreen> {
 
                 SizedBox(height: 15.h),
 
-                // MostSaleProductsSection(),
+                //ProductsSection(),
 
                 SizedBox(height: 25.h),
 
@@ -63,7 +64,7 @@ class _HomeScreen extends State<HomeScreen> {
 
                 SizedBox(height: 15.h),
 
-                // RecentProductsSection(),
+                //ProductsSection(),
               ],
             ),
           ),

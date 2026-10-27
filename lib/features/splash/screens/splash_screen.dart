@@ -71,7 +71,7 @@ class _SplashScreenState extends State<SplashScreen>
           if (state is SplashNavigateToLogin) {
       Navigator.pushReplacementNamed(
         context,
-        Routes.loginRoute,
+        Routes.mainRoute,
         arguments: false,
       );
     } else if (state is SplashGoToOnboarding) {
