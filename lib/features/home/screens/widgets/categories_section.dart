@@ -24,9 +24,10 @@ class CategoriesSection extends StatelessWidget {
         'image': ImageAssets.OTPImage,
       },
       {
-        'title': 'package',
+        'title': 'detergents',
         'image': ImageAssets.OTPImage,
       },
+      
     ];
 
     return Padding(
@@ -37,8 +38,8 @@ class CategoriesSection extends StatelessWidget {
         itemCount: categories.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          crossAxisSpacing: 12.w,
-          mainAxisSpacing: 12.h,
+          crossAxisSpacing: 10.w,
+          mainAxisSpacing: 10.h,
           childAspectRatio: 1.15,
         ),
         itemBuilder: (context, index) {

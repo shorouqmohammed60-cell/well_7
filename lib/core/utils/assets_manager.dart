@@ -23,6 +23,8 @@ class ImageAssets {
   static const String profile = '$imagePath/profile.png';
   static const String rectangle = '$imagePath/rectangle.png';
   static const String time = '$imagePath/time.png';
+  static const String productCart = '$imagePath/product.png';
+
 
 
 
@@ -45,6 +47,10 @@ class ImageAssets {
   static const String home = '$iconsPath/home.svg';
   static const String homeIcon = '$iconsPath/home_icon.svg';
   static const String searchIcon = '$iconsPath/search.svg';
+  static const String product = '$iconsPath/product.svg';
+  static const String bookMark = '$iconsPath/bookMark.svg';
+
+
   static const String notificationIcon = '$iconsPath/notification_icon.svg';
 
 

@@ -15,33 +15,36 @@ class ProductsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final products = [
       {
-        'image': ImageAssets.OTPImage,
+        'image': ImageAssets.logoImage,
         'title': 'olive , Black olive',
-        'description': 'slices 950 g',
+        
       },
       {
         'image': ImageAssets.OTPImage,
         'title': 'Biryani Basmati Fried rice',
-        'description': 'Kheer, Rice Bran',
+       
       },
       {
         'image': ImageAssets.OTPImage,
         'title': 'Black olive',
-        'description': 'slices 950 g',
+        
       },
     ];
 
     return Container(
-      color: backgroundColor,
+      
+      decoration:BoxDecoration(
+      
+      ),
       padding: EdgeInsets.symmetric(
         vertical: 18.h,
       ),
       child: SizedBox(
-        height: 325.h,
+        height: 251.h,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.symmetric(
-            horizontal: 20.w,
+            horizontal: 10.w,
           ),
           itemCount: products.length,
           separatorBuilder: (_, index) =>
@@ -52,7 +55,7 @@ class ProductsSection extends StatelessWidget {
             return ProductCard(
               image: product['image']!,
               title: product['title']!,
-              description: product['description']!,
+            
             );
           },
         ),

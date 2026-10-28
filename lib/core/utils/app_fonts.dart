@@ -90,12 +90,17 @@ TextStyle getUnderLine({Color? color, double? fontSize}) {
 
 // regular style 400
 TextStyle getRegularStyle(
-    {Color? color, double? fontHeight, double? fontSize}) {
+    {Color? color, double? fontHeight,fontStyle, double? fontSize, double? fontWeight,  FontWeight? weight }) {
   return getTextStyle(
-      color: color ?? AppColors.black,
+      color: color ?? AppColors.darkBlack,
       fontWeight: FontWeight.w400,
-      fontSize: fontSize ?? 18.sp,
-      fontHeight: fontHeight);
+      fontSize: fontSize ?? 14.sp,
+      fontHeight: fontHeight,
+      //fontfamily: AppStrings.fontFamily,
+      
+
+
+     );
 }
 
 // regular style 500

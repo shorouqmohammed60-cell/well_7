@@ -100,7 +100,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               // hint: widget.hint != null ? Text(widget.hint!) : null,
               hintText: widget.hint,
               
-              labelStyle: getRegularStyle(
+              labelStyle: getBoldStyle(
                 fontHeight: 1,
                 color: myFocusNode.hasFocus ? AppColors.primary : AppColors.gray,
               ),
@@ -130,7 +130,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 fontStyle: FontStyle.normal,
 
               ),
-              errorStyle: getRegularStyle(color: AppColors.red, fontSize: 12),
+              errorStyle: getBoldStyle(color: AppColors.red, fontSize: 12),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: AppColors.darkGrey, width: 1),
                 borderRadius: BorderRadius.all(

@@ -13,6 +13,12 @@ class AppColors {
   static Color hintGreyColor = HexColor('#C4C4C4');
   static Color darkBlack = HexColor('#110101');
   static Color lightyellow = HexColor('#FFDB57');
+  static Color lightGrey2 = HexColor('#E5E5E5');
+  static Color lightpink = HexColor('#FFF8DF');
+
+
+
+  
 
 
 

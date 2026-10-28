@@ -45,26 +45,28 @@ class _HomeScreen extends State<HomeScreen> {
 
                  CategoriesSection(),
 
-                SizedBox(height: 25.h),
+                SizedBox(height: 15.h),
 
                 RowOfTitle(
                   title: 'most_sale_products'.tr(),
                 ),
 
+                SizedBox(height: 10.h),
+
+                ProductsSection(
+                  backgroundColor:AppColors.lightpink,
+                ),
+
                 SizedBox(height: 15.h),
-
-                //ProductsSection(),
-
-                SizedBox(height: 25.h),
 
                
                 RowOfTitle(
                   title: 'Recent_products'.tr(),
                 ),
 
-                SizedBox(height: 15.h),
+                SizedBox(height: 10.h),
 
-                //ProductsSection(),
+                ProductsSection(),
               ],
             ),
           ),
